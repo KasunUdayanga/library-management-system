@@ -35,7 +35,26 @@ toggler.addEventListener("click", function () {
 });
 
 function loadDashboard() {
-        document.getElementById("feature-content").innerHTML = "";
+        document.getElementById("category").style.display = "none";
+        document.getElementById("Add_category").style.display = "none";
+        featureTitle.textContent = "Dashboard";
+
+
+
+}
+
+
+
+function loadCategory() {
+        document.getElementById("category").style.display = "block";
+        document.getElementById("Add_category").style.display = "none";
+        featureTitle.textContent = "Dashboard";
+
+
+
+}
+function loadAddCategory() {
+        document.getElementById("Add_category").style.display = "block";
         featureTitle.textContent = "Dashboard";
 
 
