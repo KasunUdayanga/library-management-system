@@ -41,3 +41,25 @@ function loadDashboard() {
 
 
 }
+
+function addFine() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("fine.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadFineList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("fine_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
