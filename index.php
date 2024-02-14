@@ -13,6 +13,28 @@
 
 <body>
 
+<?php
+       session_start();
+
+    if (!$_SESSION['username']) {
+        header('Location: login.php');
+        exit; 
+        
+    } 
+
+    if (isset($_GET['logout'])) {
+        
+        $_SESSION = array();
+        session_destroy();
+        header("Location: login.php");
+        exit;
+    }
+
+    if (isset($_GET['message'])) {
+        echo "<script>alert('".$_GET['message']."');</script>";
+    }
+?>
+
 
   <div class="wrapper">
     <!-- Sidebar -->
@@ -36,7 +58,12 @@
 
 
        
-
+        <li class="menu-header">Users</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadUserList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">User List</span>
+          </a>
+        </li>
 
 
       </ul>
