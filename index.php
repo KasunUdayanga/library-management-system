@@ -111,11 +111,11 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end" aria-labelledby="navbarDropdown" style="margin-top: 20px;">
               
               <center><i class="fas fa-user-circle" style="color: black; font-size: 32px; margin-left: 10px;"></i></center>
-              <p class="h6" id="userName" style="text-align: center;"></p>
+              <p class="h6" id="userName" style="text-align: center;"><?php echo $_SESSION['username']; ?></p>
 
 
-              <li><a class="dropdown-item">Profile</a></li>
-              <li><a class="dropdown-item">Logout</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#profileItem" onclick="loadProfile()">Profile</a></li>
+              <li><a class="dropdown-item" href="?logout">Logout</a></li>
             </ul>
           </div>
         </div>
