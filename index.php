@@ -31,7 +31,20 @@
           </a>
         </li>
 
+      
+        <li class="menu-header">Book</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addBook()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">Add Book</span>
+          </a>
+        </li>
+
         
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadBookList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Book List</span>
+          </a>
+        </li> 
 
 
 
