@@ -33,7 +33,12 @@
 
         
 
-
+        <li class="menu-header">Library Members</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addLMember()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Member</span>
+          </a>
+        </li>
 
        
 

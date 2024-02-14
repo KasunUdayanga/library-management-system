@@ -41,3 +41,14 @@ function loadDashboard() {
 
 
 }
+
+function addLMember() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("lib-member-add.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
