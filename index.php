@@ -31,7 +31,16 @@
           </a>
         </li>
 
-        
+        <li class="nav-item" style="margin-top: 40px;">
+          <a href="#" class="nav-link text-white" onclick="loadCategory()">
+            <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Categories</span>
+          </a>
+        </li>
+        <li class="nav-item" style="margin-top: 40px;">
+          <a href="#" class="nav-link text-white" onclick="loadAddCategory()">
+            <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Add Categories</span>
+          </a>
+        </li>
 
 
 
@@ -104,8 +113,14 @@
 
         <div id="feature-content">
 
+         <div id="category"  style="display:none"> <?php
+  include('category_list.php')
+  ?></div>
         </div>
-
+        <div id="Add_category"  style="display:none"> <?php
+  include('category_add.php')
+  ?></div>
+        </div>
 
       </div>
 
