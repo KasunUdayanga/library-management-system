@@ -40,7 +40,11 @@
           </a>
         </li>
 
-       
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadLMemList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Members List</span>
+          </a>
+        </li>
 
 
 

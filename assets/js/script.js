@@ -52,3 +52,14 @@ function addLMember() {
         });
 
 }
+
+function loadLMemList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("lib-member-list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
