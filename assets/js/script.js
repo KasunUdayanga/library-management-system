@@ -41,3 +41,25 @@ function loadDashboard() {
 
 
 }
+
+function addBook() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("book-add.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadBookList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("book-list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
