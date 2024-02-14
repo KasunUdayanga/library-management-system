@@ -42,13 +42,24 @@ function loadDashboard() {
 
 }
 
+function loadProfile() {
+        document.getElementById("profile-content").innerHTML = "";
+       // featureTitle.textContent = "";
+        $.get("profile.php", function (data) {
+                $('#profile-content').html(data);
+                getProfileDatails();
+
+        });
+
+}
+
 
 function loadUserList() {
         document.getElementById("feature-content").innerHTML = "";
 
         featureTitle.textContent = "";
 
-        $.get("users-list.php", function (data) {
+        $.get("user-list.php", function (data) {
                 $('#feature-content').html(data);
         });
 

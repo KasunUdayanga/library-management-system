@@ -139,6 +139,16 @@
       <!-- Page Content Area Ends -->
 
     </div>
+    <div class="modal fade" id="profileItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div id="profile-content">
+
+            </div>
+            
+            </div>
+        </div>
+    </div>
   </div>
 
 
