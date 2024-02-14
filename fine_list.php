@@ -152,6 +152,58 @@ require_once "assets/php/fine_process.php"
         </div>
     </div>
 
+    <script>
+function validateForm() {
+    // Get input values
+    var fineId = document.getElementById("fine_id").value.trim();
+    var bookId = document.getElementById("book_id").value.trim();
+    var memberId = document.getElementById("member_id").value.trim();
+    var fineAmount = document.getElementById("fine_amount").value.trim();
+    var fineDateModified = document.getElementById("fine_date_modified").value.trim();
+
+    // Check if any field is empty
+    if (fineId === "" || bookId === "" || memberId === "" || fineAmount === "" || fineDateModified === "") {
+        alert("Please fill in all fields");
+        return false;
+    }
+
+    // Validate Fine ID format using a regular expression
+    var fineIdRegex = /^F\d{3}$/;
+    if (!fineIdRegex.test(fineId)) {
+        alert("Invalid Fine ID format. It should start with 'F' followed by 3 digits (e.g., F001).");
+        return false;
+    }
+
+    // Validate Book ID format using a regular expression
+    var bookIdRegex = /^B\d{3}$/;
+    if (!bookIdRegex.test(bookId)) {
+        alert("Invalid Book ID format. It should start with 'B' followed by 3 digits (e.g., B001).");
+        return false;
+    }
+
+    // Validate Member ID format using a regular expression
+    var memberIdRegex = /^M\d{3}$/;
+    if (!memberIdRegex.test(memberId)) {
+        alert("Invalid Member ID format. It should start with 'M' followed by 3 digits (e.g., M001).");
+        return false;
+    }
+
+    // Check if Fine Amount is a valid number and within the specified range
+    if (isNaN(fineAmount) || fineAmount < 2 || fineAmount > 500) {
+        alert("Fine amount must be a number between 2 and 500 LKR.");
+        return false;
+    }
+
+    // If all validations pass, return true to submit the form
+    return true;
+}
+
+function closeForm() {
+    alert("Back to the Home page!");
+    window.location.href = 'fine.php';
+}
+</script>
+
 
 
 
