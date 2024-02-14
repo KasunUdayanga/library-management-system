@@ -41,6 +41,22 @@
             <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Add Categories</span>
           </a>
         </li>
+        
+        <li class="menu-header">Fines</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addFine()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Fine</span>
+          </a>
+        </li>
+
+        
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadFineList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Fines List</span>
+          </a>
+        </li>
+
+        
 
 
 

@@ -44,6 +44,7 @@ function loadDashboard() {
 }
 
 
+
 function loadCategory() {
         document.getElementById("category").style.display = "block";
         document.getElementById("Add_category").style.display = "none";
@@ -57,5 +58,27 @@ function loadAddCategory() {
         featureTitle.textContent = "Dashboard";
 
 
+
+}
+
+function addFine() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("fine.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadFineList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("fine_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
 
 }
