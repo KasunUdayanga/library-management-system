@@ -41,3 +41,15 @@ function loadDashboard() {
 
 
 }
+
+
+function loadUserList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("users-list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
