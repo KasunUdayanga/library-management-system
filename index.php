@@ -64,14 +64,6 @@
             <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">Add Book</span>
           </a>
         </li>
-
-        <li class="menu-header">Book Borrow</li>
-        <li class="nav-item">
-          <a href="#" class="nav-link text-white" onclick="addBroow()">
-            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Borrow</span>
-          </a>
-        </li>
-
         
         <li class="nav-item">
           <a href="#" class="nav-link text-white" onclick="loadBookList()">
@@ -85,15 +77,25 @@
             <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Borrow</span>
           </a>
         </li>
-
         
-        <li class="nav-item">
+         <li class="nav-item">
           <a href="#" class="nav-link text-white" onclick="loadBorrowList()">
             <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Borrow List</span>
           </a>
         </li>
-       
 
+        <li class="menu-header">Library Members</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addLMember()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Member</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadLMemList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Members List</span>
+          </a>
+        </li>
 
 
       </ul>

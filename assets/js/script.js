@@ -43,8 +43,6 @@ function loadDashboard() {
 
 }
 
-
-
 function loadCategory() {
         document.getElementById("feature-content").innerHTML = "";
 
@@ -137,3 +135,26 @@ function loadBorrowList() {
         });
 
 }
+
+function addLMember() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("lib-member-add.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadLMemList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("lib-member-list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
