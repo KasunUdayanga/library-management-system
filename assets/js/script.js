@@ -41,3 +41,26 @@ function loadDashboard() {
 
 
 }
+
+
+function addBroow() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("borrow.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadBorrowList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("borrow_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
