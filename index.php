@@ -30,8 +30,59 @@
             <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Dashboard</span>
           </a>
         </li>
+        <li class="menu-header">Category</li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadAddCategory()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">Add Categories</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadCategory()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Categories</span>
+          </a>
+        </li>
+        
+        <li class="menu-header">Fines</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addFine()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Fine</span>
+          </a>
+        </li>
 
         
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadFineList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Fines List</span>
+          </a>
+        </li>
+
+       <li class="menu-header">Book</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addBook()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">Add Book</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadBookList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Book List</span>
+          </a>
+        </li> 
+
+        <li class="menu-header">Book Borrow</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addBroow()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">New Borrow</span>
+          </a>
+        </li>
+        
+         <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadBorrowList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Borrow List</span>
+          </a>
+        </li>
 
         <li class="menu-header">Library Members</li>
         <li class="nav-item">
@@ -45,7 +96,6 @@
             <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Members List</span>
           </a>
         </li>
-
 
 
       </ul>
@@ -113,8 +163,14 @@
 
         <div id="feature-content">
 
+         <div id="category"  style="display:none"> <?php
+  include('category_list.php')
+  ?></div>
         </div>
-
+        <div id="Add_category"  style="display:none"> <?php
+  include('category_add.php')
+  ?></div>
+        </div>
 
       </div>
 
