@@ -30,15 +30,17 @@
             <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Dashboard</span>
           </a>
         </li>
+        <li class="menu-header">Category</li>
 
-        <li class="nav-item" style="margin-top: 40px;">
-          <a href="#" class="nav-link text-white" onclick="loadCategory()">
-            <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Categories</span>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadAddCategory()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">Add Categories</span>
           </a>
         </li>
-        <li class="nav-item" style="margin-top: 40px;">
-          <a href="#" class="nav-link text-white" onclick="loadAddCategory()">
-            <i class="fa fa-desktop"></i><span class="fs-6 ms-3 d-sm-inline">Add Categories</span>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadCategory()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Categories</span>
           </a>
         </li>
         
@@ -56,7 +58,20 @@
           </a>
         </li>
 
+       <li class="menu-header">Book</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="addBook()">
+            <i class="fa fa-plus"></i><span class="fs-6 ms-3 d-sm-inline">Add Book</span>
+          </a>
+        </li>
+
         
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadBookList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Book List</span>
+          </a>
+        </li> 
+
 
 
 

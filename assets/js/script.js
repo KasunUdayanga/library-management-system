@@ -46,16 +46,26 @@ function loadDashboard() {
 
 
 function loadCategory() {
-        document.getElementById("category").style.display = "block";
-        document.getElementById("Add_category").style.display = "none";
-        featureTitle.textContent = "Dashboard";
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("category_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
 
 
 
 }
 function loadAddCategory() {
-        document.getElementById("Add_category").style.display = "block";
-        featureTitle.textContent = "Dashboard";
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("category_add.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
 
 
 
@@ -78,6 +88,29 @@ function loadFineList() {
         featureTitle.textContent = "";
 
         $.get("fine_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+
+function addBook() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("book-add.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadBookList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("book-list.php", function (data) {
                 $('#feature-content').html(data);
         });
 
