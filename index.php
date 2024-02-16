@@ -13,6 +13,28 @@
 
 <body>
 
+<?php
+       session_start();
+
+    if (!$_SESSION['username']) {
+        header('Location: login.php');
+        exit; 
+        
+    } 
+
+    if (isset($_GET['logout'])) {
+        
+        $_SESSION = array();
+        session_destroy();
+        header("Location: login.php");
+        exit;
+    }
+
+    if (isset($_GET['message'])) {
+        echo "<script>alert('".$_GET['message']."');</script>";
+    }
+?>
+
 
   <div class="wrapper">
     <!-- Sidebar -->
@@ -83,7 +105,7 @@
             <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Borrow List</span>
           </a>
         </li>
-
+        
         <li class="menu-header">Library Members</li>
         <li class="nav-item">
           <a href="#" class="nav-link text-white" onclick="addLMember()">
@@ -94,6 +116,13 @@
         <li class="nav-item">
           <a href="#" class="nav-link text-white" onclick="loadLMemList()">
             <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">Members List</span>
+          </a>
+        </li>
+        
+         <li class="menu-header">Users</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" onclick="loadUserList()">
+            <i class="fa fa-list"></i><span class="fs-6 ms-3 d-sm-inline">User List</span>
           </a>
         </li>
 
@@ -143,11 +172,11 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end" aria-labelledby="navbarDropdown" style="margin-top: 20px;">
               
               <center><i class="fas fa-user-circle" style="color: black; font-size: 32px; margin-left: 10px;"></i></center>
-              <p class="h6" id="userName" style="text-align: center;"></p>
+              <p class="h6" id="userName" style="text-align: center;"><?php echo $_SESSION['username']; ?></p>
 
 
-              <li><a class="dropdown-item">Profile</a></li>
-              <li><a class="dropdown-item">Logout</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#profileItem" onclick="loadProfile()">Profile</a></li>
+              <li><a class="dropdown-item" href="?logout">Logout</a></li>
             </ul>
           </div>
         </div>
@@ -176,6 +205,16 @@
 
       <!-- Page Content Area Ends -->
 
+    </div>
+    <div class="modal fade" id="profileItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div id="profile-content">
+
+            </div>
+            
+            </div>
+        </div>
     </div>
   </div>
 

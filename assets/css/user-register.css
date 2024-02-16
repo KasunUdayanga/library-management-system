@@ -1,0 +1,15 @@
+.user-id-wrapper {
+    display: flex;
+    align-items: center;
+}
+.user-id-prefix {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    pointer-events: none; /* Prevent cursor interaction */
+}
+.user-id-input {
+    flex: 1;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
