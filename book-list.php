@@ -30,13 +30,7 @@ require_once "assets/php/processbook.php";
 <?php endif; ?>
 
 <?php
-$bookId = $_GET['bookId']; // Assuming 'bookId' is the query parameter for the book ID
-
-$sql = "SELECT * FROM book WHERE book_id = '$bookId'"; // Assuming 'book_id' is the column name in your database table
-
-$result = $database->query($sql) or die($database->error);
-
-$row = $result->fetch_row();
+ 
 ?>
     <div class="container mt-5" style="width: 80%; margin: 0 auto;" id="updateForm">
   <div class="card shadow p-3 mb-5 bg-body rounded">

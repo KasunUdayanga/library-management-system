@@ -1,0 +1,58 @@
+body {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+}
+
+.main-container{
+    width: 40%;
+}
+
+.card {
+    background-color: rgba(27, 25, 25, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+h1 {
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    color: white; 
+    
+}
+
+.form-label{
+    color: #c9c9c9;
+}
+
+.user-id-wrapper {
+    display: flex;
+    align-items: center;
+}
+.user-id-prefix {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    pointer-events: none; /* Prevent cursor interaction */
+}
+.user-id-input {
+    flex: 1;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+    #main_container{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+
