@@ -35,12 +35,64 @@ toggler.addEventListener("click", function () {
 });
 
 function loadDashboard() {
-        document.getElementById("feature-content").innerHTML = "";
+        document.getElementById("category").style.display = "none";
+        document.getElementById("Add_category").style.display = "none";
         featureTitle.textContent = "Dashboard";
 
 
 
 }
+
+
+
+function loadCategory() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("category_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+
+
+}
+function loadAddCategory() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("category_add.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+
+
+
+}
+
+function addFine() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("fine.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
+function loadFineList() {
+        document.getElementById("feature-content").innerHTML = "";
+
+        featureTitle.textContent = "";
+
+        $.get("fine_list.php", function (data) {
+                $('#feature-content').html(data);
+        });
+
+}
+
 
 function addBook() {
         document.getElementById("feature-content").innerHTML = "";
